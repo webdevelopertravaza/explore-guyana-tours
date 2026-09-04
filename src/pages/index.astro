@@ -3,30 +3,30 @@ const tours = [
   {
     title: "Kaieteur Falls Adventure",
     description:
-      "Take to the skies and experience one of the world's most spectacular single-drop waterfalls deep in the heart of Guyana.",
-    image: "/images/kaieteur-falls.jpg",
+      "Take to the skies and experience one of the world's most spectacular waterfalls deep in the heart of Guyana.",
+    image: "/images/K-falls.jpeg",
     tag: "Bucket List Experience"
   },
   {
     title: "Georgetown City Tour",
     description:
-      "Discover Georgetown through its architecture, markets, landmarks, stories and unmistakable Caribbean-South American character.",
-    image: "/images/georgetown.jpg",
-    tag: "Discover the Capital"
+      "Discover Georgetown through its architecture, markets, landmarks, stories and unmistakable Guyanese character.",
+    image: "/images/Guyana-kissingbridge.jpeg",
+    tag: "Discover Georgetown"
   },
   {
-    title: "Guyana Food Tour",
+    title: "Georgetown Food Tour",
     description:
-      "Taste your way through Guyana's incredible cultural mix with local dishes, markets, flavours and stories.",
-    image: "/images/food-tour.jpg",
+      "Taste your way through Guyana's extraordinary cultural mix with local dishes, markets, flavours and stories.",
+    image: "/images/Food-tour.jpeg",
     tag: "Taste Guyana"
   },
   {
-    title: "Culture & Heritage Tours",
+    title: "Culture & Local Experiences",
     description:
-      "Connect with the people, traditions and history that have shaped one of South America's most fascinating destinations.",
-    image: "/images/culture-tour.jpg",
-    tag: "Go Deeper"
+      "Meet Guyana through its people, markets, food, traditions, nature and the stories that make the country unique.",
+    image: "/images/Guyana-market.jpeg",
+    tag: "Experience Guyana"
   }
 ];
 
@@ -34,7 +34,7 @@ const services = [
   {
     title: "Private Tours",
     description:
-      "Your Guyana, your way. Private experiences designed around your interests, timing and travel style."
+      "Your Guyana, your way. Private experiences designed around your interests, schedule and travel style."
   },
   {
     title: "Corporate Travel",
@@ -44,7 +44,7 @@ const services = [
   {
     title: "Events & Groups",
     description:
-      "Transportation and destination experiences for conferences, special events, families and organized groups."
+      "Transportation and destination experiences for conferences, events, families and organized groups."
   },
   {
     title: "Airport Transfers",
@@ -100,8 +100,10 @@ const services = [
   </head>
 
   <body>
+
     <header class="site-header">
       <div class="container nav-wrap">
+
         <a href="/" class="brand">
           <img
             src="/images/Explore-guyana-logo.png"
@@ -111,23 +113,28 @@ const services = [
 
         <nav class="desktop-nav">
           <a href="#experiences">Tours</a>
-          <a href="#private">Private & Corporate</a>
+          <a href="#private">Private Tours</a>
+          <a href="#corporate">Corporate</a>
           <a href="#about">About</a>
           <a href="#book">Book</a>
           <a href="#contact">Contact</a>
         </nav>
 
         <a href="#book" class="nav-cta">Book a Tour</a>
+
       </div>
     </header>
 
     <main>
+
       <!-- HERO -->
       <section class="hero">
+
         <div class="hero-image"></div>
         <div class="hero-overlay"></div>
 
         <div class="container hero-content">
+
           <p class="eyebrow">WELCOME TO GUYANA</p>
 
           <h1>
@@ -141,27 +148,34 @@ const services = [
           </p>
 
           <div class="hero-actions">
-            <a href="#book" class="button primary">
+
+            <a href="#book" class="button hero-primary">
               Explore Tours
             </a>
 
-            <a href="#private" class="button secondary">
+            <a href="#private" class="button hero-secondary">
               Plan a Private Experience
             </a>
+
           </div>
+
         </div>
+
       </section>
+
 
       <!-- TRUST -->
       <section class="trust">
+
         <div class="container trust-grid">
+
           <div>
             <span class="trust-small">BOOK WITH CONFIDENCE</span>
             <strong>Professional Local Experiences</strong>
           </div>
 
           <div>
-            <span class="trust-small">FIND US ON</span>
+            <span class="trust-small">FEATURED ON</span>
             <strong>GetYourGuide</strong>
           </div>
 
@@ -174,27 +188,37 @@ const services = [
             <span class="trust-small">PROUD MEMBER</span>
             <strong>Canada Guyana Chamber of Commerce</strong>
           </div>
+
         </div>
+
       </section>
+
 
       <!-- INTRO -->
       <section class="intro" id="about">
+
         <div class="container intro-grid">
+
           <div>
-            <p class="section-label">THE GUYANA YOU CAME TO EXPERIENCE</p>
+
+            <p class="section-label">
+              THE GUYANA YOU CAME TO EXPERIENCE
+            </p>
 
             <h2>
               More than a tour.
               <span>A connection to Guyana.</span>
             </h2>
+
           </div>
 
           <div class="intro-text">
+
             <p>
-              Guyana is unlike anywhere else in the world. Untouched
-              rainforest, powerful waterfalls, vibrant markets, extraordinary
-              wildlife and a culture shaped by generations of remarkable
-              people.
+              Guyana is unlike anywhere else in the world.
+              Untouched rainforest, powerful waterfalls, vibrant markets,
+              extraordinary wildlife and a culture shaped by generations
+              of remarkable people.
             </p>
 
             <p>
@@ -204,111 +228,231 @@ const services = [
             </p>
 
             <p>
-              Whether this is your first visit or a return home, we want you
-              to leave with more than photographs. We want you to leave with
-              stories.
+              Whether this is your first visit or a return home,
+              we want you to leave with more than photographs.
+              We want you to leave with stories.
             </p>
+
           </div>
+
         </div>
+
       </section>
+
 
       <!-- EXPERIENCES -->
       <section class="experiences" id="experiences">
+
         <div class="container">
+
           <div class="section-heading">
+
             <div>
               <p class="section-label">EXPLORE GUYANA</p>
               <h2>Experiences worth travelling for.</h2>
             </div>
 
-            <a href="#book" class="text-link">View all experiences →</a>
+            <a href="#book" class="text-link">
+              View all experiences →
+            </a>
+
           </div>
 
+
           <div class="tour-grid">
+
             {
               tours.map((tour) => (
+
                 <article class="tour-card">
+
                   <div class="tour-image-wrap">
+
                     <img
                       src={tour.image}
                       alt={tour.title}
                       class="tour-image"
                     />
-                    <span class="tour-tag">{tour.tag}</span>
+
+                    <span class="tour-tag">
+                      {tour.tag}
+                    </span>
+
                   </div>
 
                   <div class="tour-body">
+
                     <h3>{tour.title}</h3>
+
                     <p>{tour.description}</p>
-                    <a href="#book">Book this experience →</a>
+
+                    <a href="#book">
+                      Book this experience →
+                    </a>
+
                   </div>
+
                 </article>
+
               ))
             }
+
           </div>
+
         </div>
+
       </section>
+
 
       <!-- KAIETEUR -->
       <section class="feature">
+
         <div class="feature-image">
+
           <img
-            src="/images/kaieteur-falls.jpg"
+            src="/images/falls-k.jpeg"
             alt="Kaieteur Falls Guyana"
           />
+
         </div>
 
         <div class="feature-content">
-          <p class="section-label light">AN ICON OF GUYANA</p>
 
-          <h2>Some places have to be felt.</h2>
+          <p class="section-label light">
+            AN ICON OF GUYANA
+          </p>
+
+          <h2>
+            Some places have to be felt.
+          </h2>
 
           <p>
             Fly across Guyana's extraordinary rainforest and discover
-            Kaieteur Falls — a natural wonder hidden deep within one of the
-            world's most pristine landscapes.
+            Kaieteur Falls — one of the country's most unforgettable
+            natural wonders.
           </p>
 
           <p>
-            The journey is part of the experience. The moment you first see
-            Kaieteur is one you will remember long after you return home.
+            The journey is part of the experience. The moment you first
+            see Kaieteur is one you will remember long after you return home.
           </p>
 
           <a href="#book" class="button gold">
             Experience Kaieteur Falls
           </a>
+
         </div>
+
       </section>
 
-      <!-- PRIVATE / CORPORATE -->
-      <section class="private-section" id="private">
-        <div class="container">
-          <div class="center-heading">
-            <p class="section-label">TRAVEL YOUR WAY</p>
-            <h2>Private. Corporate. Completely customized.</h2>
-            <p>
-              From one private transfer to a complete destination program,
-              our team can build the experience around you.
+
+      <!-- FOOD -->
+      <section class="food-section">
+
+        <div class="container food-grid">
+
+          <div class="food-copy">
+
+            <p class="section-label">
+              TASTE GUYANA
             </p>
+
+            <h2>
+              Every flavour tells a story.
+            </h2>
+
+            <p>
+              Guyanese cuisine reflects generations of Indigenous,
+              African, Indian, Chinese, Portuguese, Caribbean
+              and European influence.
+            </p>
+
+            <p>
+              Join us in Georgetown and discover markets,
+              street food, traditional favourites, sweet treats
+              and the people behind the flavours.
+            </p>
+
+            <a href="#book" class="button primary">
+              Discover Our Food Tours
+            </a>
+
           </div>
+
+          <div class="food-gallery">
+
+            <img src="/images/Guyana-food.jpeg" alt="Guyanese food" />
+
+            <img src="/images/Guyana-eggball.jpeg" alt="Guyanese eggball" />
+
+            <img src="/images/dessert.jpeg" alt="Guyanese dessert" />
+
+            <img src="/images/Guyana-fruit.jpeg" alt="Fresh fruit in Guyana" />
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- PRIVATE -->
+      <section class="private-section" id="private">
+
+        <div class="container">
+
+          <div class="center-heading">
+
+            <p class="section-label">
+              TRAVEL YOUR WAY
+            </p>
+
+            <h2>
+              Private. Personal. Completely customized.
+            </h2>
+
+            <p>
+              Whether you have a few hours or several days,
+              our team can create a Guyana experience around your interests,
+              schedule and travel style.
+            </p>
+
+          </div>
+
 
           <div class="services-grid">
+
             {
               services.map((service) => (
+
                 <div class="service-card">
-                  <div class="service-icon">✦</div>
+
+                  <div class="service-icon">
+                    ✦
+                  </div>
+
                   <h3>{service.title}</h3>
+
                   <p>{service.description}</p>
+
                 </div>
+
               ))
             }
+
           </div>
 
+
           <div class="private-cta">
+
             <div>
-              <span>Need something designed just for you?</span>
+              <span>
+                Need something designed just for you?
+              </span>
+
               <strong>
-                Tell us where you want to go. We'll help take it from there.
+                Tell us where you want to go.
+                We'll help take it from there.
               </strong>
             </div>
 
@@ -318,23 +462,170 @@ const services = [
             >
               Request a Custom Tour
             </a>
+
           </div>
+
         </div>
+
       </section>
+
+
+      <!-- CORPORATE -->
+      <section class="corporate" id="corporate">
+
+        <div class="container corporate-grid">
+
+          <div>
+
+            <p class="section-label light">
+              CORPORATE & GROUP TRAVEL
+            </p>
+
+            <h2>
+              Professional transportation.
+              Local expertise.
+            </h2>
+
+            <p>
+              Explore Guyana Tours supports businesses,
+              conferences, organizations, delegations and groups
+              with reliable transportation and destination services.
+            </p>
+
+          </div>
+
+          <div class="corporate-list">
+
+            <div>
+              Airport Transfers
+            </div>
+
+            <div>
+              Corporate Transportation
+            </div>
+
+            <div>
+              Conference & Event Transportation
+            </div>
+
+            <div>
+              Private Group Tours
+            </div>
+
+            <div>
+              Delegate Experiences
+            </div>
+
+            <div>
+              Customized Itineraries
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- CULTURE / NATURE -->
+      <section class="gallery-section">
+
+        <div class="container">
+
+          <div class="center-heading">
+
+            <p class="section-label">
+              DISCOVER MORE
+            </p>
+
+            <h2>
+              Culture. Nature. People. Guyana.
+            </h2>
+
+          </div>
+
+
+          <div class="visual-grid">
+
+            <div class="visual large">
+
+              <img
+                src="/images/Guyana-lilly.jpeg"
+                alt="Guyana nature"
+              />
+
+              <span>Nature & Wildlife</span>
+
+            </div>
+
+
+            <div class="visual">
+
+              <img
+                src="/images/Guyana-mantatee.jpeg"
+                alt="Guyana wildlife"
+              />
+
+              <span>Wildlife Experiences</span>
+
+            </div>
+
+
+            <div class="visual">
+
+              <img
+                src="/images/Guyana-sign.jpeg"
+                alt="Guyana"
+              />
+
+              <span>Explore Local Guyana</span>
+
+            </div>
+
+
+            <div class="visual">
+
+              <img
+                src="/images/Guyana-maret2.jpeg"
+                alt="Georgetown market"
+              />
+
+              <span>Markets & Local Culture</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
 
       <!-- BOOK -->
       <section class="booking-section" id="book">
+
         <div class="container">
+
           <div class="center-heading booking-heading">
-            <p class="section-label">BOOK YOUR EXPERIENCE</p>
-            <h2>Your Guyana adventure starts here.</h2>
-            <p>
-              Browse live availability and securely reserve your experience
-              directly through our booking platform.
+
+            <p class="section-label">
+              BOOK YOUR EXPERIENCE
             </p>
+
+            <h2>
+              Your Guyana adventure starts here.
+            </h2>
+
+            <p>
+              Browse live availability and securely reserve
+              your experience directly through our booking platform.
+            </p>
+
           </div>
 
+
           <div class="booking-box">
+
             <script
               is:inline
               type="text/javascript"
@@ -351,77 +642,128 @@ const services = [
             <noscript>
               Please enable JavaScript in your browser to book.
             </noscript>
+
           </div>
+
         </div>
+
       </section>
 
-      <!-- CTA -->
+
+      <!-- FINAL CTA -->
       <section class="final-cta">
+
         <div class="container">
-          <p class="section-label light">EXPLORE DIFFERENTLY</p>
 
-          <h2>Come for the sights.<br />Leave connected to Guyana.</h2>
-
-          <p>
-            Let us help you discover the places, people and experiences that
-            make Guyana unforgettable.
+          <p class="section-label light">
+            EXPLORE DIFFERENTLY
           </p>
 
-          <a href="#book" class="button gold">Start Exploring</a>
+          <h2>
+            Come for the sights.
+            <br />
+            Leave connected to Guyana.
+          </h2>
+
+          <p>
+            Let us help you discover the places,
+            people and experiences that make Guyana unforgettable.
+          </p>
+
+          <a href="#book" class="button gold">
+            Start Exploring
+          </a>
+
         </div>
+
       </section>
+
     </main>
 
+
+    <!-- FOOTER -->
     <footer id="contact">
+
       <div class="container footer-grid">
+
         <div class="footer-brand">
+
           <img
             src="/images/Explore-guyana-logo.png"
             alt="Explore Guyana Tours"
           />
 
           <p>
-            Authentic tours, private experiences and professional
-            transportation throughout Guyana.
+            Authentic tours, private experiences
+            and professional transportation throughout Guyana.
           </p>
+
         </div>
 
+
         <div>
+
           <h4>Explore</h4>
+
           <a href="#experiences">Tours</a>
           <a href="#book">Kaieteur Falls</a>
-          <a href="#book">City Tours</a>
+          <a href="#book">Georgetown City Tours</a>
           <a href="#book">Food Tours</a>
           <a href="#book">Culture Tours</a>
+
         </div>
 
+
         <div>
+
           <h4>Travel Services</h4>
+
           <a href="#private">Private Tours</a>
-          <a href="#private">Corporate Travel</a>
-          <a href="#private">Events & Groups</a>
-          <a href="#private">Airport Transfers</a>
+          <a href="#corporate">Corporate Travel</a>
+          <a href="#corporate">Events & Groups</a>
+          <a href="#corporate">Airport Transfers</a>
+
         </div>
 
+
         <div>
+
           <h4>Contact</h4>
+
           <a href="mailto:exploreguyanatours@gmail.com">
             exploreguyanatours@gmail.com
           </a>
 
           <p class="membership">
-            Member of the Canada Guyana Chamber of Commerce
+            Proud member of the Canada Guyana Chamber of Commerce
           </p>
+
+          <p class="marketplace">
+            Featured on GetYourGuide and TripAdvisor
+          </p>
+
         </div>
+
       </div>
+
 
       <div class="container footer-bottom">
-        <span>© 2026 Explore Guyana Tours. All rights reserved.</span>
-        <span>Discover Guyana. Experience More.</span>
+
+        <span>
+          © 2026 Explore Guyana Tours. All rights reserved.
+        </span>
+
+        <span>
+          Discover Guyana. Experience More.
+        </span>
+
       </div>
+
     </footer>
 
+
     <style>
+
       :root {
         --green: #005b3b;
         --green-dark: #003d2a;
@@ -445,11 +787,16 @@ const services = [
 
       body {
         margin: 0;
-        background: var(--white);
+        background: white;
         color: var(--ink);
         font-family:
-          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", sans-serif;
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
         line-height: 1.6;
       }
 
@@ -468,19 +815,29 @@ const services = [
         margin: 0 auto;
       }
 
+
+      /* HEADER */
+
       .site-header {
         position: sticky;
         top: 0;
         z-index: 50;
-        background: rgba(255, 255, 255, 0.95);
+
+        background:
+          rgba(255, 255, 255, 0.96);
+
         backdrop-filter: blur(16px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+        border-bottom:
+          1px solid rgba(0, 0, 0, 0.05);
       }
 
       .nav-wrap {
         min-height: 88px;
+
         display: flex;
         align-items: center;
+
         gap: 34px;
       }
 
@@ -489,14 +846,17 @@ const services = [
       }
 
       .brand img {
-        width: 190px;
+        width: 200px;
         height: auto;
       }
 
       .desktop-nav {
         display: flex;
+
         gap: 28px;
+
         font-size: 14px;
+
         font-weight: 650;
       }
 
@@ -506,53 +866,77 @@ const services = [
 
       .nav-cta {
         background: var(--green);
+
         color: white;
+
         padding: 13px 22px;
+
         border-radius: 999px;
+
         font-size: 14px;
+
         font-weight: 750;
       }
 
+
+      /* HERO */
+
       .hero {
         min-height: 720px;
+
         position: relative;
+
         display: flex;
+
         align-items: center;
+
         overflow: hidden;
       }
 
       .hero-image {
         position: absolute;
+
         inset: 0;
+
         background:
-          url("/images/hero-guyana.jpg") center center / cover no-repeat;
+          url("/images/falls.jpeg")
+          center center / cover no-repeat;
       }
 
       .hero-overlay {
         position: absolute;
+
         inset: 0;
+
         background:
           linear-gradient(
             90deg,
-            rgba(0, 45, 28, 0.88) 0%,
-            rgba(0, 45, 28, 0.67) 43%,
-            rgba(0, 45, 28, 0.12) 75%
+            rgba(0, 45, 28, 0.9) 0%,
+            rgba(0, 45, 28, 0.7) 42%,
+            rgba(0, 45, 28, 0.16) 78%
           );
       }
 
       .hero-content {
         position: relative;
+
         z-index: 2;
+
         color: white;
+
         padding: 100px 0;
       }
 
       .eyebrow,
       .section-label {
         font-size: 12px;
+
         letter-spacing: 0.18em;
+
         font-weight: 800;
+
         color: var(--orange);
+
         margin: 0 0 18px;
       }
 
@@ -561,42 +945,67 @@ const services = [
       }
 
       .hero h1 {
-        max-width: 780px;
+        max-width: 850px;
+
         margin: 0;
-        font-size: clamp(56px, 7vw, 92px);
+
+        font-size:
+          clamp(56px, 7vw, 94px);
+
         line-height: 0.96;
+
         letter-spacing: -0.055em;
+
         font-weight: 850;
       }
 
       .hero h1 span {
         display: block;
+
         color: var(--gold);
       }
 
       .hero-copy {
-        max-width: 600px;
+        max-width: 620px;
+
         margin: 28px 0 0;
+
         font-size: 20px;
-        color: rgba(255, 255, 255, 0.9);
+
+        color:
+          rgba(255,255,255,0.92);
       }
 
       .hero-actions {
         display: flex;
+
         flex-wrap: wrap;
+
         gap: 14px;
+
         margin-top: 34px;
       }
 
+
+      /* BUTTONS */
+
       .button {
         display: inline-flex;
+
         align-items: center;
+
         justify-content: center;
+
         min-height: 52px;
+
         padding: 0 26px;
+
         border-radius: 999px;
+
         font-weight: 800;
+
         font-size: 14px;
+
         transition: 0.2s ease;
       }
 
@@ -606,37 +1015,51 @@ const services = [
 
       .button.primary {
         background: var(--green);
-        color: white;
-      }
 
-      .hero .button.primary {
-        background: var(--gold);
-        color: var(--green-dark);
-      }
-
-      .button.secondary {
-        border: 1px solid rgba(255, 255, 255, 0.7);
         color: white;
       }
 
       .button.gold {
         background: var(--gold);
+
         color: var(--green-dark);
       }
 
+      .hero-primary {
+        background: var(--gold);
+
+        color: var(--green-dark);
+      }
+
+      .hero-secondary {
+        border:
+          1px solid rgba(255,255,255,0.75);
+
+        color: white;
+      }
+
+
+      /* TRUST */
+
       .trust {
-        border-bottom: 1px solid var(--line);
+        border-bottom:
+          1px solid var(--line);
+
         background: white;
       }
 
       .trust-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-columns:
+          repeat(4, 1fr);
       }
 
       .trust-grid > div {
         padding: 28px 24px;
-        border-right: 1px solid var(--line);
+
+        border-right:
+          1px solid var(--line);
       }
 
       .trust-grid > div:first-child {
@@ -649,17 +1072,26 @@ const services = [
 
       .trust-small {
         display: block;
+
         font-size: 10px;
+
         font-weight: 800;
+
         letter-spacing: 0.12em;
+
         color: var(--muted);
+
         margin-bottom: 4px;
       }
 
       .trust strong {
         font-size: 14px;
+
         color: var(--green-dark);
       }
+
+
+      /* INTRO */
 
       .intro {
         padding: 110px 0;
@@ -667,24 +1099,33 @@ const services = [
 
       .intro-grid {
         display: grid;
-        grid-template-columns: 0.9fr 1.1fr;
+
+        grid-template-columns:
+          0.9fr 1.1fr;
+
         gap: 100px;
       }
 
       h2 {
-        font-size: clamp(40px, 5vw, 64px);
+        font-size:
+          clamp(40px, 5vw, 64px);
+
         line-height: 1.04;
+
         letter-spacing: -0.045em;
+
         margin: 0;
       }
 
       h2 span {
         display: block;
+
         color: var(--green);
       }
 
       .intro-text {
         font-size: 18px;
+
         color: #425048;
       }
 
@@ -692,16 +1133,24 @@ const services = [
         margin-top: 0;
       }
 
+
+      /* EXPERIENCES */
+
       .experiences {
         background: var(--offwhite);
+
         padding: 100px 0 110px;
       }
 
       .section-heading {
         display: flex;
+
         align-items: end;
+
         justify-content: space-between;
+
         gap: 30px;
+
         margin-bottom: 45px;
       }
 
@@ -711,40 +1160,57 @@ const services = [
 
       .text-link {
         color: var(--green);
+
         font-weight: 800;
+
         font-size: 14px;
-        white-space: nowrap;
       }
 
       .tour-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
         gap: 28px;
       }
 
       .tour-card {
         background: white;
+
         border-radius: 22px;
+
         overflow: hidden;
-        border: 1px solid var(--line);
+
+        border:
+          1px solid var(--line);
+
         transition: 0.25s ease;
       }
 
       .tour-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 22px 50px rgba(0, 40, 25, 0.09);
+
+        box-shadow:
+          0 22px 50px
+          rgba(0, 40, 25, 0.09);
       }
 
       .tour-image-wrap {
         position: relative;
+
         height: 330px;
+
         overflow: hidden;
       }
 
       .tour-image {
         height: 100%;
+
         object-fit: cover;
-        transition: transform 0.4s ease;
+
+        transition:
+          transform 0.4s ease;
       }
 
       .tour-card:hover .tour-image {
@@ -753,13 +1219,21 @@ const services = [
 
       .tour-tag {
         position: absolute;
+
         top: 18px;
+
         left: 18px;
+
         background: white;
+
         color: var(--green-dark);
+
         border-radius: 999px;
+
         padding: 8px 13px;
+
         font-size: 11px;
+
         font-weight: 800;
       }
 
@@ -769,37 +1243,54 @@ const services = [
 
       .tour-body h3 {
         margin: 0 0 10px;
+
         font-size: 25px;
+
         letter-spacing: -0.025em;
       }
 
       .tour-body p {
         color: var(--muted);
+
         margin: 0 0 22px;
       }
 
       .tour-body a {
         font-weight: 800;
+
         color: var(--green);
       }
 
+
+      /* FEATURE */
+
       .feature {
         display: grid;
-        grid-template-columns: 1.05fr 0.95fr;
+
+        grid-template-columns:
+          1.05fr 0.95fr;
+
         min-height: 680px;
       }
 
       .feature-image img {
         height: 100%;
+
         object-fit: cover;
       }
 
       .feature-content {
-        background: var(--green-dark);
+        background:
+          var(--green-dark);
+
         color: white;
+
         padding: 90px 8vw;
+
         display: flex;
+
         flex-direction: column;
+
         justify-content: center;
       }
 
@@ -809,90 +1300,306 @@ const services = [
 
       .feature-content p {
         max-width: 560px;
-        color: rgba(255, 255, 255, 0.78);
+
+        color:
+          rgba(255,255,255,0.78);
+
         font-size: 18px;
       }
 
       .feature-content .button {
         align-self: flex-start;
+
         margin-top: 16px;
       }
 
+
+      /* FOOD */
+
+      .food-section {
+        padding: 110px 0;
+
+        background: white;
+      }
+
+      .food-grid {
+        display: grid;
+
+        grid-template-columns:
+          0.9fr 1.1fr;
+
+        gap: 70px;
+
+        align-items: center;
+      }
+
+      .food-copy p {
+        color: var(--muted);
+
+        font-size: 17px;
+      }
+
+      .food-copy .button {
+        margin-top: 14px;
+      }
+
+      .food-gallery {
+        display: grid;
+
+        grid-template-columns:
+          repeat(2, 1fr);
+
+        gap: 14px;
+      }
+
+      .food-gallery img {
+        height: 240px;
+
+        object-fit: cover;
+
+        border-radius: 18px;
+      }
+
+
+      /* PRIVATE */
+
       .private-section {
         padding: 110px 0;
+
+        background:
+          var(--offwhite);
       }
 
       .center-heading {
-        max-width: 800px;
+        max-width: 820px;
+
         margin: 0 auto 55px;
+
         text-align: center;
       }
 
       .center-heading > p:last-child {
-        max-width: 620px;
+        max-width: 650px;
+
         margin: 22px auto 0;
+
         color: var(--muted);
+
         font-size: 18px;
       }
 
       .services-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-columns:
+          repeat(4, 1fr);
+
         gap: 18px;
       }
 
       .service-card {
-        background: var(--green-soft);
+        background:
+          var(--green-soft);
+
         padding: 32px 26px;
+
         border-radius: 18px;
       }
 
       .service-icon {
         width: 42px;
+
         height: 42px;
+
         display: grid;
+
         place-items: center;
+
         background: var(--gold);
+
         color: var(--green-dark);
+
         border-radius: 50%;
+
         margin-bottom: 24px;
       }
 
       .service-card h3 {
         margin: 0 0 10px;
+
         font-size: 20px;
       }
 
       .service-card p {
         margin: 0;
+
         color: var(--muted);
+
         font-size: 15px;
       }
 
       .private-cta {
         margin-top: 50px;
-        border-top: 1px solid var(--line);
+
+        border-top:
+          1px solid var(--line);
+
         padding-top: 40px;
+
         display: flex;
+
         justify-content: space-between;
+
         align-items: center;
+
         gap: 30px;
       }
 
       .private-cta span {
         color: var(--muted);
+
         display: block;
+
         font-size: 14px;
       }
 
       .private-cta strong {
         display: block;
+
         font-size: 22px;
+
         margin-top: 3px;
       }
 
+
+      /* CORPORATE */
+
+      .corporate {
+        background:
+          var(--green-dark);
+
+        color: white;
+
+        padding: 100px 0;
+      }
+
+      .corporate-grid {
+        display: grid;
+
+        grid-template-columns:
+          1fr 1fr;
+
+        gap: 80px;
+
+        align-items: center;
+      }
+
+      .corporate p {
+        color:
+          rgba(255,255,255,0.78);
+
+        font-size: 18px;
+      }
+
+      .corporate-list {
+        display: grid;
+
+        grid-template-columns:
+          repeat(2,1fr);
+
+        gap: 12px;
+      }
+
+      .corporate-list div {
+        background:
+          rgba(255,255,255,0.08);
+
+        border:
+          1px solid
+          rgba(255,255,255,0.12);
+
+        border-radius: 14px;
+
+        padding: 20px;
+
+        font-weight: 700;
+      }
+
+
+      /* VISUAL GALLERY */
+
+      .gallery-section {
+        padding: 110px 0;
+      }
+
+      .visual-grid {
+        display: grid;
+
+        grid-template-columns:
+          repeat(3,1fr);
+
+        grid-template-rows:
+          260px 260px;
+
+        gap: 16px;
+      }
+
+      .visual {
+        position: relative;
+
+        overflow: hidden;
+
+        border-radius: 18px;
+      }
+
+      .visual.large {
+        grid-row:
+          span 2;
+      }
+
+      .visual img {
+        height: 100%;
+
+        object-fit: cover;
+      }
+
+      .visual:after {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        background:
+          linear-gradient(
+            transparent 50%,
+            rgba(0,40,25,0.75)
+          );
+      }
+
+      .visual span {
+        position: absolute;
+
+        left: 22px;
+
+        bottom: 18px;
+
+        z-index: 2;
+
+        color: white;
+
+        font-weight: 800;
+
+        font-size: 17px;
+      }
+
+
+      /* BOOKING */
+
       .booking-section {
-        background: var(--offwhite);
+        background:
+          var(--offwhite);
+
         padding: 110px 0;
       }
 
@@ -902,61 +1609,96 @@ const services = [
 
       .booking-box {
         background: white;
-        border: 1px solid var(--line);
+
+        border:
+          1px solid var(--line);
+
         border-radius: 22px;
+
         padding: 30px;
+
         min-height: 300px;
-        box-shadow: 0 20px 60px rgba(0, 40, 25, 0.06);
+
+        box-shadow:
+          0 20px 60px
+          rgba(0,40,25,0.06);
       }
+
+
+      /* FINAL CTA */
 
       .final-cta {
         background: var(--green);
+
         color: white;
+
         text-align: center;
+
         padding: 100px 20px;
       }
 
       .final-cta h2 {
         max-width: 850px;
+
         margin: 0 auto;
       }
 
       .final-cta p {
         max-width: 650px;
-        margin: 24px auto 32px;
-        color: rgba(255, 255, 255, 0.8);
+
+        margin:
+          24px auto 32px;
+
+        color:
+          rgba(255,255,255,0.8);
+
         font-size: 18px;
       }
 
+
+      /* FOOTER */
+
       footer {
         background: white;
+
         padding: 70px 0 24px;
       }
 
       .footer-grid {
         display: grid;
-        grid-template-columns: 1.6fr 0.8fr 0.9fr 1.2fr;
+
+        grid-template-columns:
+          1.6fr
+          0.8fr
+          0.9fr
+          1.2fr;
+
         gap: 50px;
       }
 
       .footer-brand img {
         max-width: 230px;
+
         margin-bottom: 20px;
       }
 
       .footer-brand p {
         max-width: 330px;
+
         color: var(--muted);
       }
 
       footer h4 {
         margin: 0 0 18px;
+
         color: var(--green-dark);
       }
 
       footer a {
         display: block;
+
         color: var(--muted);
+
         margin: 8px 0;
       }
 
@@ -964,24 +1706,39 @@ const services = [
         color: var(--green);
       }
 
-      .membership {
+      .membership,
+      .marketplace {
         margin-top: 22px;
+
         color: var(--green);
+
         font-size: 13px;
+
         font-weight: 700;
       }
 
       .footer-bottom {
-        border-top: 1px solid var(--line);
+        border-top:
+          1px solid var(--line);
+
         margin-top: 55px;
+
         padding-top: 23px;
+
         display: flex;
+
         justify-content: space-between;
+
         color: var(--muted);
+
         font-size: 12px;
       }
 
+
+      /* TABLET */
+
       @media (max-width: 900px) {
+
         .desktop-nav {
           display: none;
         }
@@ -991,17 +1748,22 @@ const services = [
         }
 
         .hero-overlay {
-          background: rgba(0, 50, 31, 0.72);
+          background:
+            rgba(0,50,31,0.72);
         }
 
         .trust-grid,
         .services-grid {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns:
+            repeat(2,1fr);
         }
 
         .intro-grid,
-        .feature {
-          grid-template-columns: 1fr;
+        .feature,
+        .food-grid,
+        .corporate-grid {
+          grid-template-columns:
+            1fr;
         }
 
         .intro-grid {
@@ -1013,17 +1775,40 @@ const services = [
         }
 
         .tour-grid {
-          grid-template-columns: 1fr;
+          grid-template-columns:
+            1fr;
         }
 
         .footer-grid {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns:
+            repeat(2,1fr);
         }
+
+        .visual-grid {
+          grid-template-columns:
+            repeat(2,1fr);
+
+          grid-template-rows:
+            auto;
+        }
+
+        .visual,
+        .visual.large {
+          height: 320px;
+
+          grid-row: auto;
+        }
+
       }
 
+
+      /* MOBILE */
+
       @media (max-width: 600px) {
+
         .container {
-          width: min(100% - 28px, 1180px);
+          width:
+            min(100% - 28px,1180px);
         }
 
         .site-header .nav-wrap {
@@ -1035,7 +1820,9 @@ const services = [
         }
 
         .nav-cta {
-          padding: 11px 15px;
+          padding:
+            11px 15px;
+
           font-size: 12px;
         }
 
@@ -1049,19 +1836,27 @@ const services = [
 
         .trust-grid,
         .services-grid,
-        .footer-grid {
-          grid-template-columns: 1fr;
+        .footer-grid,
+        .corporate-list,
+        .visual-grid {
+          grid-template-columns:
+            1fr;
         }
 
         .trust-grid > div {
           border-right: 0;
-          border-bottom: 1px solid var(--line);
+
+          border-bottom:
+            1px solid var(--line);
+
           padding-left: 0;
         }
 
         .intro,
         .experiences,
+        .food-section,
         .private-section,
+        .gallery-section,
         .booking-section {
           padding: 75px 0;
         }
@@ -1070,6 +1865,7 @@ const services = [
         .private-cta,
         .footer-bottom {
           flex-direction: column;
+
           align-items: flex-start;
         }
 
@@ -1082,13 +1878,31 @@ const services = [
         }
 
         .feature-content {
-          padding: 65px 28px;
+          padding:
+            65px 28px;
+        }
+
+        .food-gallery {
+          grid-template-columns:
+            1fr 1fr;
+        }
+
+        .food-gallery img {
+          height: 170px;
+        }
+
+        .visual,
+        .visual.large {
+          height: 280px;
         }
 
         .booking-box {
           padding: 12px;
         }
+
       }
+
     </style>
+
   </body>
 </html>
